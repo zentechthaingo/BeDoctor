@@ -1,10 +1,9 @@
 package bedoctor.zentech.com.bedoctor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -12,8 +11,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import org.w3c.dom.Text;
 
 public class ManagerCheckin extends AppCompatActivity {
   private static final String TAG = ManagerCheckin.class.getSimpleName();
@@ -25,6 +24,9 @@ public class ManagerCheckin extends AppCompatActivity {
     setContentView(R.layout.activity_manager__checkin);
     ButterKnife.bind(this);
     numberCustomer = FirebaseDatabase.getInstance().getReference().child("number_checkin");
+    numberCustomer.child("number_checkin")
+        .child("currentPatientNumber").getDatabase();
+
     listener();
   }
 
@@ -42,9 +44,7 @@ public class ManagerCheckin extends AppCompatActivity {
 
       @Override
       public void onCancelled(DatabaseError databaseError) {
-        // Getting Post failed, log a message
         Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
-        // ...
       }
     };
     numberCustomer.addValueEventListener(numberListener);
