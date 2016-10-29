@@ -8,6 +8,11 @@
       android:layout_height="wrap_content"
       android:orientation="vertical"
       >
+    <include
+        layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -45,7 +50,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="@string/department_doctor"
-          android:inputType="datetime"
+          android:inputType="textNoSuggestions"
           />
 
     </android.support.design.widget.TextInputLayout>
@@ -65,7 +70,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="@string/limit_people"
-          android:inputType="phone"
+          android:inputType="number"
           />
 
     </android.support.design.widget.TextInputLayout>
