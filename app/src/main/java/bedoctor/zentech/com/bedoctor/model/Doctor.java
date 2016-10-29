@@ -6,8 +6,8 @@ public class Doctor {
   private String limitPatient;
   private String id;
   private String beaconId;
-  private String lastPatienNumber;
-  private String currentPatienNumber;
+  private String lastPatientNumber;
+  private String currentPatientNumber;
 
   public String getName() {
     return name;
@@ -49,19 +49,19 @@ public class Doctor {
     this.beaconId = beaconId;
   }
 
-  public String getLastPatienNumber() {
-    return lastPatienNumber;
+  public String getLastPatientNumber() {
+    return lastPatientNumber;
   }
 
-  public void setLastPatienNumber(String lastPatienNumber) {
-    this.lastPatienNumber = lastPatienNumber;
+  public void setLastPatientNumber(String lastPatientNumber) {
+    this.lastPatientNumber = lastPatientNumber;
   }
 
-  public String getCurrentPatienNumber() {
-    return currentPatienNumber;
+  public String getCurrentPatientNumber() {
+    return currentPatientNumber;
   }
 
-  public void setCurrentPatienNumber(String currentPatienNumber) {
-    this.currentPatienNumber = currentPatienNumber;
+  public void setCurrentPatientNumber(String currentPatientNumber) {
+    this.currentPatientNumber = currentPatientNumber;
   }
 }
